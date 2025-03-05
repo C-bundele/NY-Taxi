@@ -318,7 +318,7 @@ filtered_df = merged_df[merged_df["pickup_location_id"] == selected_location]
 
 # Check if data is available for the selected location
 if filtered_df.empty:
-    st.warning(f"No data available for {location_options[selected_location]} (ID: {selected_location})")
+    st.warning(f"No data available")
 else:
     # Group by 'pickup_hour' and calculate the mean absolute error (MAE) for the selected location
     mae_selected_location = (
